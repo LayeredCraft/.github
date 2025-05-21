@@ -1,0 +1,11 @@
+{
+  "name": "safe-settings-runner",
+  "version": "1.0.0",
+  "description": "Runner for GitHub Safe Settings CLI",
+  "scripts": {
+    "full-sync": "safe-settings"
+  },
+  "dependencies": {
+    "@github/safe-settings": "^2.1.13"
+  }
+}

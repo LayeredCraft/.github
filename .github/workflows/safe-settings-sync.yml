@@ -24,7 +24,8 @@ jobs:
           ref: ${{ env.SAFE_SETTINGS_VERSION }}
           path: ${{ env.SAFE_SETTINGS_CODE_DIR }}
       - uses: actions/setup-node@v4
-      - run: npx @github/safe-settings
+      - run: npm install
+      - run: npm run full-sync
         working-directory: ${{ env.SAFE_SETTINGS_CODE_DIR }}
         env:
           GH_ORG: ${{ vars.SAFE_SETTINGS_GH_ORG }}
