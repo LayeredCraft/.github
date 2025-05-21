@@ -10,6 +10,8 @@ repository:
   allow_squash_merge: true
   allow_rebase_merge: false
   delete_branch_on_merge: true
+  gitignore_template: "VisualStudio"
+  license_template: mit
   visibility: public
   topics:
     - dotnet
@@ -24,8 +26,7 @@ rulesets:
     target: branch
     conditions:
       ref_name:
-        include:
-          - "main"
+        include: ["~DEFAULT_BRANCH"]
         exclude: []
     rules:
       pull_request_approval:
@@ -44,24 +45,25 @@ rulesets:
         enabled: false
 
 labels:
-  - name: 🐛 bug
-    color: "d73a4a"
-    description: "Something isn't working"
-  - name: ✨ enhancement
-    color: "a2eeef"
-    description: "New feature or request"
-  - name: 📜 documentation
-    color: "0075ca"
-    description: "Improvements or additions to documentation"
-  - name: 👋 good first issue
-    color: "7057ff"
-    description: "Good for newcomers"
-  - name: 😎 help wanted
-    color: "008672"
-    description: "Extra attention is needed"
-  - name: 🚧 blocked
-    color: "e4e669"
-    description: "Blocked by another task or issue"
-  - name: 💡 idea
-    color: "c2e0c6"
-    description: "Idea or proposal for future work"
+  include:
+    - name: 🐛 bug
+      color: "d73a4a"
+      description: "Something isn't working"
+    - name: ✨ enhancement
+      color: "a2eeef"
+      description: "New feature or request"
+    - name: 📜 documentation
+      color: "0075ca"
+      description: "Improvements or additions to documentation"
+    - name: 👋 good first issue
+      color: "7057ff"
+      description: "Good for newcomers"
+    - name: 😎 help wanted
+      color: "008672"
+      description: "Extra attention is needed"
+    - name: 🚧 blocked
+      color: "e4e669"
+      description: "Blocked by another task or issue"
+    - name: 💡 idea
+      color: "c2e0c6"
+      description: "Idea or proposal for future work"
