@@ -25,6 +25,7 @@ jobs:
           path: ${{ env.SAFE_SETTINGS_CODE_DIR }}
       - uses: actions/setup-node@v4
       - run: npm install
+        working-directory: ${{ env.SAFE_SETTINGS_CODE_DIR }}
       - run: npm run full-sync
         working-directory: ${{ env.SAFE_SETTINGS_CODE_DIR }}
         env:
@@ -32,5 +33,5 @@ jobs:
           APP_ID: ${{ vars.SAFE_SETTINGS_APP_ID }}
           PRIVATE_KEY: ${{ secrets.SAFE_SETTINGS_PRIVATE_KEY }}
           ADMIN_REPO: .github
-          CONFIG_PATH: .github
-          SETTINGS_FILE_PATH: settings.yml
+          CONFIG_PATH: safe-settings
+          DEPLOYMENT_CONFIG_FILE: ${{ github.workspace }}/safe-settings/deployment-settings.yml
