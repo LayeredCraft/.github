@@ -1,0 +1,34 @@
+# .github/settings.yml for Probot Settings App
+
+# Repository defaults (applies to repos created or explicitly named here)
+repository:
+  default_branch: main
+  has_issues: true
+  has_projects: false
+  has_wiki: false
+  allow_merge_commit: false
+  allow_squash_merge: true
+  allow_rebase_merge: false
+  delete_branch_on_merge: true
+  visibility: public
+  topics:
+    - dotnet
+    - aws
+    - serverless
+    - layeredcraft
+    - open-source
+
+# Branch protection rules for main branch
+branches:
+  - name: main
+    protection:
+      required_status_checks:
+        strict: true
+        contexts:
+          - build
+      enforce_admins: true
+      required_pull_request_reviews:
+        required_approving_review_count: 1
+        dismiss_stale_reviews: true
+        require_code_owner_reviews: true
+      restrictions: null  # No push restrictions beyond branch protection
