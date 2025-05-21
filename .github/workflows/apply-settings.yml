@@ -17,7 +17,6 @@ jobs:
       contents: write
       issues: write
       pull-requests: write
-      administration: write
     steps:
       - name: 📂 Checkout
         uses: actions/checkout@v4

@@ -1,7 +1,7 @@
 # .github/settings.yml for github/safe-settings action
 
 # Applies to the repository where the workflow runs
-settings:
+repository:
   default_branch: main
   has_issues: true
   has_projects: false
@@ -18,39 +18,50 @@ settings:
     - layeredcraft
     - open-source
 
-  branches:
-    - name: main
-      protection:
-        required_status_checks:
-          strict: true
-          contexts:
-            - build
-        enforce_admins: true
-        required_pull_request_reviews:
-          required_approving_review_count: 1
-          dismiss_stale_reviews: true
-          require_code_owner_reviews: true
-        restrictions: null
+rulesets:
+  - name: "Require PR reviews"
+    enforcement: active
+    target: branch
+    conditions:
+      ref_name:
+        include:
+          - "main"
+        exclude: []
+    rules:
+      pull_request_approval:
+        required_approving_review_count: 1
+        dismiss_stale_reviews_on_push: true
+        require_code_owner_review: true
+      required_status_checks:
+        strict_required_status_checks_policy: true
+        required_check_runs:
+          - "build"
+      non_fast_forward:
+        enabled: true
+      linear_history:
+        enabled: true
+      signature_requirements:
+        enabled: false
 
-  labels:
-    - name: 🐛 bug
-      color: "d73a4a"
-      description: "Something isn't working"
-    - name: ✨ enhancement
-      color: "a2eeef"
-      description: "New feature or request"
-    - name: 📜 documentation
-      color: "0075ca"
-      description: "Improvements or additions to documentation"
-    - name: 👋 good first issue
-      color: "7057ff"
-      description: "Good for newcomers"
-    - name: 😎 help wanted
-      color: "008672"
-      description: "Extra attention is needed"
-    - name: 🚧 blocked
-      color: "e4e669"
-      description: "Blocked by another task or issue"
-    - name: 💡 idea
-      color: "c2e0c6"
-      description: "Idea or proposal for future work"
+labels:
+  - name: 🐛 bug
+    color: "d73a4a"
+    description: "Something isn't working"
+  - name: ✨ enhancement
+    color: "a2eeef"
+    description: "New feature or request"
+  - name: 📜 documentation
+    color: "0075ca"
+    description: "Improvements or additions to documentation"
+  - name: 👋 good first issue
+    color: "7057ff"
+    description: "Good for newcomers"
+  - name: 😎 help wanted
+    color: "008672"
+    description: "Extra attention is needed"
+  - name: 🚧 blocked
+    color: "e4e669"
+    description: "Blocked by another task or issue"
+  - name: 💡 idea
+    color: "c2e0c6"
+    description: "Idea or proposal for future work"
