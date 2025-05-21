@@ -32,3 +32,27 @@ branches:
         dismiss_stale_reviews: true
         require_code_owner_reviews: true
       restrictions: null  # No push restrictions beyond branch protection
+
+# 🎯 Issue Labels
+labels:
+  - name: 🐛 bug
+    color: "d73a4a"
+    description: "Something isn't working"
+  - name: ✨ enhancement
+    color: "a2eeef"
+    description: "New feature or request"
+  - name: 📝 documentation
+    color: "0075ca"
+    description: "Improvements or additions to documentation"
+  - name: 👋 good first issue
+    color: "7057ff"
+    description: "Good for newcomers"
+  - name: 😎 help wanted
+    color: "008672"
+    description: "Extra attention is needed"
+  - name: 🚧 blocked
+    color: "e4e669"
+    description: "Blocked by another task or issue"
+  - name: 💡 idea
+    color: "c2e0c6"
+    description: "Idea or proposal for future work"      
