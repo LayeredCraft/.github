@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # Version/tag of github/safe-settings repo to use:
-      SAFE_SETTINGS_VERSION: 2.1.13
+      SAFE_SETTINGS_VERSION: main-enterprise
 
       # Path on GHA runner box where safe-settings code downloaded to:
       SAFE_SETTINGS_CODE_DIR: ${{ github.workspace }}/.safe-settings-code
@@ -26,8 +26,8 @@ jobs:
       - uses: actions/setup-node@v4
       - run: npm install
         working-directory: ${{ env.SAFE_SETTINGS_CODE_DIR }}
-      # - run: npm run full-sync
-      - run: npm run
+      - run: npm run full-sync
+      # - run: npm run
         working-directory: ${{ env.SAFE_SETTINGS_CODE_DIR }}
         env:
           GH_ORG: ${{ vars.SAFE_SETTINGS_GH_ORG }}
