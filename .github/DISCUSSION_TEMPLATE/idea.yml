@@ -1,0 +1,18 @@
+name: 💡 Idea
+description: Suggest a new idea or enhancement
+labels: ["💡 idea"]
+body:
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Why do you want this?
+      placeholder: Explain the problem or opportunity
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: What's your proposed solution?
+      placeholder: Describe your idea
+    validations:
+      required: true

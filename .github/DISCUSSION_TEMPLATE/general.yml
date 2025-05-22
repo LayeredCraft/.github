@@ -1,0 +1,15 @@
+name: 🧵 Open Discussion
+description: Start a general topic or ask a question
+labels: ["discussion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for general thoughts, ideas, or community discussions.
+  - type: textarea
+    id: topic
+    attributes:
+      label: What's on your mind?
+      placeholder: Share your thoughts...
+    validations:
+      required: true
