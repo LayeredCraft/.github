@@ -1,6 +1,5 @@
 # .github/settings.yml for github/safe-settings action
 
-# Applies to the repository where the workflow runs
 repository:
   default_branch: main
   has_issues: true
@@ -20,29 +19,22 @@ repository:
     - layeredcraft
     - open-source
 
-rulesets:
-  - name: "Require PR reviews"
-    enforcement: active
-    target: branch
-    conditions:
-      ref_name:
-        include: ["~DEFAULT_BRANCH"]
-        exclude: []
-    rules:
-      pull_request_approval:
-        required_approving_review_count: 1
-        dismiss_stale_reviews_on_push: true
-        require_code_owner_review: true
+branches:
+  - name: main
+    protection:
       required_status_checks:
-        strict_required_status_checks_policy: true
-        required_check_runs:
-          - "build"
-      non_fast_forward:
-        enabled: true
-      linear_history:
-        enabled: true
-      signature_requirements:
-        enabled: false
+        strict: true
+        contexts:
+          - build
+      required_pull_request_reviews:
+        dismissal_restrictions: {}
+        dismiss_stale_reviews: true
+        require_code_owner_reviews: true
+        required_approving_review_count: 1
+      enforce_admins: true
+      restrictions: null
+      required_linear_history: true
+      required_signatures: false
 
 labels:
   include:
