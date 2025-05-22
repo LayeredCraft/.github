@@ -25,7 +25,7 @@ branches:
       required_status_checks:
         strict: true
         contexts:
-          - build
+          - build / build
       required_pull_request_reviews:
         dismissal_restrictions: {}
         dismiss_stale_reviews: true
