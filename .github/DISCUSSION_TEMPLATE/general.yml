@@ -1,5 +1,4 @@
-name: 🧵 Open Discussion
-description: Start a general topic or ask a question
+title: 🧵 Open Discussion
 labels: ["discussion"]
 body:
   - type: markdown

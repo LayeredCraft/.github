@@ -1,5 +1,4 @@
-name: ❓ Q&A
-description: Ask a question about usage, setup, or behavior
+title: ❓ Q&A
 labels: ["question"]
 body:
   - type: textarea

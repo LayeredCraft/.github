@@ -1,5 +1,4 @@
-name: 💡 Idea
-description: Suggest a new idea or enhancement
+title: 💡 Idea
 labels: ["💡 idea"]
 body:
   - type: textarea
