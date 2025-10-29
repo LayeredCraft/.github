@@ -1,5 +1,6 @@
 restrictedRepos:
-  - '^(?!sculptor$).*'   # exclude every repo whose name is NOT exactly 'sculptor'
-  - '^admin$'
-  - '^\.\github$'
-  - '^safe-settings$'
+  # You can exclude certain repos from safe-settings processing
+  #  If no file is specified, then the following repositories - 'admin', '.github', 'safe-settings' are exempted by default
+  exclude: ['^admin$', '^\.github$', '^safe-settings$', '.*-test']
+  include: 
+    - sculptor
