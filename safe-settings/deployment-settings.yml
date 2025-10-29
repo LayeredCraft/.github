@@ -1,2 +1,3 @@
 restrictedRepos:
-  include: ['sculptor']
+  include: 
+    - sculptor
