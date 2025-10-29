@@ -1,0 +1,5 @@
+restrictedRepos:
+  - '^(?!sculptor$).*'   # exclude every repo whose name is NOT exactly 'sculptor'
+  - '^admin$'
+  - '^\.\github$'
+  - '^safe-settings$'
