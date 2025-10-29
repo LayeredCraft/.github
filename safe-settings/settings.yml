@@ -9,8 +9,8 @@ repository:
   allow_squash_merge: true
   allow_rebase_merge: false
   delete_branch_on_merge: true
-  gitignore_template: "VisualStudio"
-  license_template: mit
+  # gitignore_template: "VisualStudio"
+  # license_template: mit
   visibility: public
   topics:
     - dotnet
