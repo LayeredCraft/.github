@@ -36,3 +36,5 @@ jobs:
           ADMIN_REPO: .github
           CONFIG_PATH: safe-settings
           SETTINGS_FILE_PATH: settings.yml
+          DEPLOYMENT_SETTINGS_FILE_PATH: deployment-settings.yml
+          LOG_LEVEL: trace
