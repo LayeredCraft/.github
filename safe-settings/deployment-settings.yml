@@ -1,0 +1,4 @@
+# .github/safe-settings/deployment-settings.yml
+restrictedRepos:
+  include:
+    - sculptor
