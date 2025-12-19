@@ -1,5 +1,11 @@
 # .github/settings.yml for github/safe-settings action
 
+teams:
+  - name: core-devs
+    permission: push
+    exclude:
+      - ".github"
+      
 repository:
   default_branch: main
   has_issues: true
