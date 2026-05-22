@@ -5,7 +5,9 @@ Welcome to LayeredCraft, a home for thoughtfully crafted, layered .NET libraries
 ---
 
 ## 🔍 What We Build
+
 * ⚙️ Infrastructure-first libraries for AWS and serverless development
+* 🗄️ Data access tooling and providers for modern cloud-native applications
 * 🗣️ Voice-first frameworks for Amazon Alexa skills
 * 🔒 Configuration and security providers using AWS-native tools
 * 🧪 Developer experience utilities for logging, testing, and observability
@@ -13,11 +15,14 @@ Welcome to LayeredCraft, a home for thoughtfully crafted, layered .NET libraries
 ---
 
 ## 📦 Key Projects
+
 | Project | Description |
 | ------- | ----------- |
+| EntityFrameworkCore.DynamoDb | Entity Framework Core provider for Amazon DynamoDB, bringing familiar EF Core patterns to single-table and cloud-native DynamoDB development |
 | DynamoDb.DistributedLock | Distributed locking mechanism using DynamoDB with a clean .NET API |
 | AlexaVoxCraft | Modular framework for building Alexa skills using MediatR and clean architecture |
 | AWSSecretsManager.Provider | Configuration provider backed by AWS Secrets Manager for .NET |
+
 > Looking for examples? Each repo includes documentation and samples in the `README.md`
 
 ---
@@ -41,9 +46,12 @@ We’re actively developing tools to improve .NET development in the cloud — c
 
 ---
 
-## 🧑‍💻 Maintainer
+## 🧑‍💻 Maintainers
 
-LayeredCraft is maintained by [Nick Cipollina](https://github.com/ncipollina), a developer focused on cloud-native .NET, serverless architecture, and voice-first interfaces.
+LayeredCraft is maintained by:
+
+* [Nick Cipollina](https://github.com/ncipollina) — cloud-native .NET, serverless architecture, and voice-first development
+* [Jonas Ha](https://github.com/j-d-ha) — contributor and maintainer focused on modern data access and DynamoDB tooling
 
 ---
 
