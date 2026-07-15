@@ -1,7 +1,6 @@
 restrictedRepos:
-  # Default exempt repos, plus custom excludes below
+  # Default exempt repos
   exclude:
     - "^admin$"
     - "^\\.github$"
     - "^safe-settings$"
-    - "^devops-templates$"
