@@ -12,7 +12,10 @@ LayeredCraft is a suite of modular .NET libraries designed for layered architect
 
 ## 🧪 Building and Testing
 
-LayeredCraft projects target `.NET 8` and `.NET 9`, and use common conventions:
+LayeredCraft projects target `.NET 8` and `.NET 9`, with newer projects
+also adopting `.NET 10` and `.NET 11` (preview) — check the repo's
+`global.json`/`.csproj` target framework(s) for what a specific project
+actually targets. All projects use common conventions:
 
 - Use `dotnet build` to compile
 - Use `dotnet test` to run tests
